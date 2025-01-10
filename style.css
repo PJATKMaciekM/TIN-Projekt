@@ -38,16 +38,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(108, 179, 249);
+    justify-content: center;
+    align-items: center;
 }
 .main {
     background: linear-gradient(10deg, #4576ff, #0323f7);
     width: 50%;
     max-width: 200px;
     color: #fff;
-    margin: 50px 43%;
+    margin: 50px auto;
     border-radius: 20px;
     padding: 1px 50px 25px;
-    position: sticky;
     text-align: center;
 }
 .main .title {
@@ -75,4 +76,30 @@ body {
     background-color: rgb(108, 179, 249);
     border-radius: 20px;
     border:5px solid #fff;
+}
+
+.show{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dayweather {
+    background: linear-gradient(10deg, #4576ff, #0323f7);
+    max-width: 17.5%;
+    color: #fff;
+    margin: 1%;
+    border-radius: 20px;
+    padding: 1px 50px 25px;
+    text-align: center;
+    flex: 25%;
+}
+.dayIconImg{
+    max-width: 50%;
+}
+.dayDetails {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dayCol {
+    flex: 50%;
 }
