@@ -67,7 +67,6 @@ body {
     text-transform: uppercase;
   }
    
-   
 .btn {
     cursor: pointer;
     margin: 5px;
@@ -79,19 +78,26 @@ body {
 }
 
 .show{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
 }
 .dayweather {
     background: linear-gradient(10deg, #4576ff, #0323f7);
-    max-width: 17.5%;
+    max-width: 20%;
     color: #fff;
-    margin: 1%;
+    margin: 10px;
     border-radius: 20px;
-    padding: 1px 50px 25px;
+    padding: 0px 10px 25px;
     text-align: center;
     flex: 25%;
+}
+.dayweather h2 {
+    font-family: Verdana;
+}
+.dayweather h1 {
+    font-family: Verdana;
+    font-size: 40px;
 }
 .dayIconImg{
     max-width: 50%;
@@ -99,7 +105,64 @@ body {
 .dayDetails {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .dayCol {
     flex: 50%;
+    max-width: 45%;
+    margin: 0 2%;
+}
+.dayCol p {
+    font-family: Verdana;
+}
+.about {
+    text-align: center;
+    font-family: Verdana;
+}
+.auth {
+    font-size: 20px;
+}
+.srch {
+    background: linear-gradient(10deg, #4576ff, #0323f7);
+    width: 50%;
+    max-width: 400px;
+    color: #fff;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 1px 50px 25px;
+    text-align: center;
+}
+.srch .title {
+    font-family: Verdana;
+}
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 0px 25px;
+    height: 70px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    justify-content: center;
+}
+.search button img {
+    width: 50px;
 }
