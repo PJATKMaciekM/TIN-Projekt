@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function findCity() {
         const searchBox = document.querySelector(".search input");
         const city = searchBox.value;
-        const temp = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+        const temp = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
         try {
             const res = await fetch(temp);
             const data = await res.json();
