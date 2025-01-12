@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function getWeather() {
         if (navigator.geolocation) {
+            var m = document.getElementById("main");
+            m.style.display = "none";
+            var load = document.getElementById("loader");
+            load.style.display = "block";
             navigator.geolocation.getCurrentPosition(pos);
         } else {
             alert("Twoja przeglądarka nie wspiera geolokacji!");
@@ -40,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchBox = document.querySelector(".search input");
         const city = searchBox.value;
         const temp = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+        var m = document.getElementById("main");
+        m.style.display = "none";
+        var load = document.getElementById("loader");
+        load.style.display = "block";
         try {
             const res = await fetch(temp);
             const data = await res.json();
@@ -72,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     function showWeather(data) {
-        var m = document.getElementById("main");
-        m.style.display = "none";
+        var load = document.getElementById("loader");
+        load.style.display = "none";
         for(let i = 0; i < 8; i++) {
             if(i === 0) {
                 showWeatherCurr(data);
