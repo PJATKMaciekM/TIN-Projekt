@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const coll = document.getElementById("show").children;
         const curr = coll.item(0);
         curr.querySelector("#dayTemp").innerHTML = data.current.temp + "°C";
-        curr.querySelector("#wind").innerHTML = data.current.wind_speed + " km/h";
+        curr.querySelector("#wind").innerHTML = Math.round(data.current.wind_speed) + " km/h";
         curr.querySelector("#pres").innerHTML = data.current.pressure + " hPa";
         curr.querySelector("#humid").innerHTML = data.current.humidity + "%";
         curr.querySelector("#rain").innerHTML = fall(0, data) + " mm";
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const coll = document.getElementById("show").children;
         const curr = coll.item(i);
         curr.querySelector("#dayTemp").innerHTML = data.daily[i].temp.day + "°C";
-        curr.querySelector("#wind").innerHTML = data.daily[i].wind_speed + " km/h";
+        curr.querySelector("#wind").innerHTML = Math.round(data.daily[i].wind_speed) + " km/h";
         curr.querySelector("#pres").innerHTML = data.daily[i].pressure + " hPa";
         curr.querySelector("#humid").innerHTML = data.daily[i].humidity + "%";
         curr.querySelector("#rain").innerHTML = fall(i, data) + " mm";
@@ -119,5 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             return 0;
         }
+    }
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.toggle('active');
     }
 });

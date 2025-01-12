@@ -37,7 +37,7 @@ li a:hover {
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(108, 179, 249);
+    background-color: rgb(138, 142, 181);
     justify-content: center;
     align-items: center;
 }
@@ -86,9 +86,9 @@ body {
     background: linear-gradient(10deg, #4576ff, #0323f7);
     max-width: 20%;
     color: #fff;
-    margin: 10px;
+    margin: 1%;
     border-radius: 20px;
-    padding: 0px 10px 25px;
+    padding: 0 1% 2.5%;
     text-align: center;
     flex: 25%;
 }
@@ -118,6 +118,9 @@ body {
 .about {
     text-align: center;
     font-family: Verdana;
+}
+.dayCol h2 {
+    font-size: 20px;
 }
 .auth {
     font-size: 20px;
@@ -165,4 +168,49 @@ body {
 }
 .search button img {
     width: 50px;
+}
+
+@media (max-width: 1200px) {
+    .dayweather {
+        max-width: 30%;
+        flex: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .dayweather {
+        max-width: 45%;
+        flex: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dayweather {
+        max-width: 100%;
+        flex: 100%;
+    }
+
+    .main, .srch {
+        width: 80%;
+        max-width: none;
+    }
+
+    .search input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search button img {
+        width: 30px;
+    }
+
+    .logo img {
+        display: none;
+    }
+
 }
